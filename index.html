@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+
+        <!-- <script src="https://aframe.io/releases/0.2.0/aframe.js"></script> -->
+        <style>
+            body
+            {
+                background-color: pink;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <a-scene>
+             <a-assets>
+                <a-asset-item id="object" src="models/b.obj"></a-asset-item>
+                <a-asset-item id="material" src="models/b.mtl"></a-asset-item>
+            </a-assets>
+            
+
+            <!-- Using the asset management system. -->
+            <a-obj-model src="#object" mtl="#material"></a-obj-model>
+        </a-scene>
+
+        <script>
+            AFRAME.registerComponent('object', {
+              init: function () {
+                var allObjects = this.el.sceneEl.object3D.children;
+                console.log(allObjects);
+              }
+            });
+        </script>
+    </body>
+</html>
+
+14.25 - 14,250
+14.00 - 14,000
+=
+-- 250 loss
